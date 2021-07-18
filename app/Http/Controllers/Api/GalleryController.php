@@ -27,7 +27,7 @@ class GalleryController extends Controller
             }
 
             $data = Gallery::create([
-                'gallery_name'                   => $photoUrl
+                'gallery_name' => $photoUrl
             ]);
 
             DB::commit();
