@@ -23,7 +23,7 @@ class GalleryController extends Controller
             if($request->file('photo')) {
                 $photo = request()->file('photo');
                 $fileNamephoto = time() . '.' . $photo->extension();
-                $photoUrl = $photo->storeAs("gallery-photo", $fileNamephoto);
+                $photoUrl = $photo->storeAs("identitywebsite/gallery-photo", $fileNamephoto);
             }
 
             $data = Gallery::create([
@@ -84,7 +84,7 @@ class GalleryController extends Controller
                 File::delete('storage/'.$data->gallery_name);
                 $photo = request()->file('photo');
                 $fileNamephoto = time() . '.' . $photo->extension();
-                $photoUrl = $photo->storeAs("gallery-photo", $fileNamephoto);
+                $photoUrl = $photo->storeAs("identitywebsite/gallery-photo", $fileNamephoto);
             }
 
             $data->gallery_name = $photoUrl;
