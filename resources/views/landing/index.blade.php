@@ -155,7 +155,7 @@
                 @foreach ($gallery as $row)
                     <div class="col-md-12">
                         <img src="{{ asset('/storage') . '/' . $row->gallery_name }}" alt="" width="100%"
-                        class="img-thumbnail">
+                            class="img-thumbnail">
                         {{-- <img src="{{ asset('/storage') . '/' . $item->photo }}" class="img-fluid" alt=""> --}}
                     </div>
                 @endforeach
@@ -199,9 +199,11 @@
                                     <div id="collapse{{ $row['id'] }}" class="collapse"
                                         aria-labelledby="heading{{ $row['id'] }}" data-parent="#accordion">
                                         <div class="card-body">
-                                            @foreach ($row['detail_our_service'] as $det)
-                                                {!! $det->description !!} <br>
-                                            @endforeach
+                                            @if (!empty($row['detail_our_service']))
+                                                @foreach ($row['detail_our_service'] as $det)
+                                                    {!! $det->description !!} <br>
+                                                @endforeach
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
