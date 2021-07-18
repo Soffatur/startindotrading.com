@@ -154,8 +154,8 @@
             <div class="row slider">
                 @foreach ($gallery as $row)
                     <div class="col-md-12">
-                        <img src="{{ asset('/storage/' . $row->gallery_name) }}" alt="" width="100%"
-                            class="img-thumbnail">
+                        <img src="{{ asset('/storage') . '/' . $row->gallery_name) }}" alt="" width="100%"
+                        class="img-thumbnail">
                     </div>
                 @endforeach
             </div>
