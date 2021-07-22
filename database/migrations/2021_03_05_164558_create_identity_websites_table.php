@@ -33,7 +33,7 @@ class CreateIdentityWebsitesTable extends Migration
             $table->string('instagram');
             $table->string('footer');
             $table->string('title');
-            $table->string('content');
+            $table->text('content');
             $table->string('button');
             $table->timestamps();
         });
