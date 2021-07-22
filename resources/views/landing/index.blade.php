@@ -86,6 +86,9 @@
                             <h6>{{ $identitywebsite->content }}</h6>
                         </div>
                         <div class="row justify-content-center">
+                            <div class="welcome-btn m-1 mt-4">
+                                {!! $identitywebsite->button !!}
+                            </div>
                             @foreach ($identityTelp as $row)
                                 <div class="welcome-btn m-1 mt-4">
                                     <a href="https://api.whatsapp.com/send/?phone={{ $row->number }}&text={{ $row->name_number }}"

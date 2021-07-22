@@ -35,7 +35,7 @@ class IdentityWebsiteSeeder extends Seeder
                 'title' => "PENYEBARAN KETAT KOMPETITIF",
                 'content' => "
                 XtreamForex menawarkan Harga paling Kompetitif di pasar, tidak tertandingi oleh pesaing kami. Pesanan Anda akan diteruskan langsung ke Penyedia Likuiditas kami - oleh karena itu tidak ada Dealing Desk Intervention..",
-                'button' => "<a href='#' class='tamai-btn'>learn more</a>",
+                'button' => "<a href='#' class='tamai-btn'>daftar</a>",
             ],
         ]);
     }
