@@ -67,7 +67,7 @@
                         <li class="nav-item d-none"><a class="page-scroll nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="page-scroll nav-link" href="#layanan-kami">Layanan Kami</a></li>
                         <li class="nav-item d-none"><a class="page-scroll nav-link" href="#blog">Blog</a></li>
-                        <li class="nav-item"><a class="page-scroll nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="page-scroll nav-link" href="#contact">Hubungi Kami</a></li>
                     </ul>
                 </div>
             </div>
@@ -127,16 +127,13 @@
                             jenis, platform, dan perangkat yang dapat disesuaikan pelanggan dengan nyaman dan efisien
                             pengalaman perdagangan.</p>
                     </div>
-                    <div class="about-btn">
-                        <a href="#contact" class="tamai-btn page-scroll ">Contact us</a>
-                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-right">
-                        {{-- <img src="{{ asset('tamai') }}/assets/img/about-right.jpg" class="img-fluid" alt=""> --}}
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1RE1q-2EoAg?rel=0"
-                                allowfullscreen></iframe>
+                        <div class="video-area text-center tamai-video">
+                            <a class="video-play" href="https://www.youtube.com/watch?v=1RE1q-2EoAg"><i
+                                    class="fa fa-play"></i></a>
+                            <h4>Watch video</h4>
                         </div>
                     </div>
                 </div>
@@ -352,8 +349,6 @@
                 <div class="col-lg-7" style="padding-right: 70px">
                     <div class="about-inifo">
                         {{-- <h2>Welcome to Tamai</h2> --}}
-                        <p class="text-danger" style="font-size: 40px; font-weight: 100">Most Convenient and Simplest
-                            Way to Trade Forex</p>
                         <p>Program Copy Trading XtreamForex menawarkan kesempatan untuk secara otomatis menyalin
                             perdagangan dari trader sukses sehingga Anda tidak perlu menghabiskan banyak waktu untuk
                             mengembangkan strategi Anda sendiri.
@@ -364,9 +359,14 @@
                 <div class="col-lg-5">
                     <div class="about-right">
                         {{-- <img src="{{ asset('img/landing/trades.jpg') }}" class="img-fluid" alt="trades"> --}}
-                        <div class="embed-responsive embed-responsive-16by9">
+                        {{-- <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2KzJ1p_eN-A?rel=0"
                                 allowfullscreen></iframe>
+                        </div> --}}
+                        <div class="video-area text-center tamai-video">
+                            <a class="video-play" href="https://www.youtube.com/watch?v=2KzJ1p_eN-A"><i
+                                    class="fa fa-play"></i></a>
+                            <h4>Watch video</h4>
                         </div>
                     </div>
                 </div>
@@ -863,7 +863,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tamai-header text-center">
-                        <h2>contact <span>us</span></h2>
+                        <h2>Hubungi <span>Kami</span></h2>
                         {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tenetur eveniet earum odio rem.</p> --}}
                     </div>
                 </div>
