@@ -23,6 +23,7 @@
                                     <tr>
                                         <th scope="col" width="5%">No</th>
                                         <th scope="col" width="15%">Our Service</th>
+                                        <th scope="col" width="15%">Our Service Description</th>
                                         <th scope="col" width="20%">Action</th>
                                     </tr>
                                 </thead>
@@ -31,6 +32,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $row->our_name_service }}</td>
+                                        <td>{{ $row->description }}</td>
                                         <td>
                                             <a class='btn btn-warning edittestimoni' href='javascript:void(0)' data-id="{{ $row->id }}" data-toggle="modal" data-target="#ubahtestimoni">Edit</a>
                                             <a href="javascript:void(0)" data-id="{{ $row->id }}"  class="btn btn-sm btn-danger btnFormHapustestimoni"> Hapus</a>
@@ -63,6 +65,11 @@
                         <input type="text" class="form-control" name="our_service" placeholder="Input Our Service .." autocomplete="off">
                         <small class="text-danger" id="vu_our_service"></small>
                     </div>
+                    <div class="form-group">
+                        <label for="our_service_desc">Description</label>
+                        <textarea type="text" class="form-control" name="our_service_desc" placeholder="Input Description .." autocomplete="off"></textarea>
+                        <small class="text-danger" id="vu_desc"></small>
+                    </div>
                     <div class="form-group" id="fprocessinserttestimoni">
                         <button type="submit" class="btn btn-info btn-block" id="testimoniinsertbtn"><i class="fas fa-feather-alt"></i> Simpan</button>
                     </div>
@@ -88,6 +95,11 @@
                         <label for="our_service">Our Service</label>
                         <input type="text" class="form-control" name="our_service" placeholder="Name Number" autocomplete="off">
                         <small class="text-danger" id="vc_our_service"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="our_service_desc2">Description</label>
+                        <textarea type="text" class="form-control" name="our_service_desc2" placeholder="Input Description .."></textarea>
+                        <small class="text-danger" id="vc_desc"></small>
                     </div>
                     <div class="form-group" id="fprocessupdatetestimoni">
                         <button type="submit" class="btn btn-info btn-block" id="testimoniupdatebtn"><i class="fas fa-feather-alt"></i> Simpan</button>

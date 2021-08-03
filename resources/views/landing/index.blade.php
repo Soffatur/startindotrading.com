@@ -185,25 +185,21 @@
                         <div id="accordion">
                             @foreach ($ourService as $row)
                                 <div class="card f-bottom">
-                                    <div class="card-header" id="heading{{ $row['id'] }}">
+                                    <div class="card-header" id="heading{{ $row->id }}">
                                         <h5 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" class="text-bold"
-                                                data-target="#collapse{{ $row['id'] }}" aria-expanded="false"
-                                                aria-controls="collapse{{ $row['id'] }}">
-                                                {{ $row['our_name_service'] }}
+                                                data-target="#collapse{{ $row->id }}" aria-expanded="false"
+                                                aria-controls="collapse{{ $row->id }}">
+                                                {{ $row->our_name_service }}
                                                 <i class="fa fa-angle-down"></i>
                                                 <i class="fa fa-angle-up"></i>
                                             </a>
                                         </h5>
                                     </div>
-                                    <div id="collapse{{ $row['id'] }}" class="collapse"
-                                        aria-labelledby="heading{{ $row['id'] }}" data-parent="#accordion">
+                                    <div id="collapse{{ $row->id }}" class="collapse"
+                                        aria-labelledby="heading{{ $row->id }}" data-parent="#accordion">
                                         <div class="card-body">
-                                            @if (!empty($row['detail_our_service']))
-                                                @foreach ($row['detail_our_service'] as $det)
-                                                    {!! $det->description !!} <br>
-                                                @endforeach
-                                            @endif
+                                            {!! $row->description !!} <br>
                                         </div>
                                     </div>
                                 </div>
@@ -535,7 +531,7 @@
                                 </ul>
                             </div>
                             <div class="pricing-btn">
-                                <a href="#" class="tamai-btn">Order</a>
+                                <a href="{{$linkCt->link_master_ct}}" target="_blank" class="tamai-btn">Order</a>
                             </div>
                         </div>
                     </div>

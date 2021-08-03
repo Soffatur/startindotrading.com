@@ -14,6 +14,7 @@ class OurServiceController extends Controller
         $request->validate(
             [
                 'our_service'            => 'required',
+                'our_service_desc'            => 'required',
             ]
         );
 
@@ -23,6 +24,7 @@ class OurServiceController extends Controller
 
             $data = OurSercive::create([
                 'our_name_service'       => $request->input('our_service'),
+                'description'       => $request->input('our_service_desc'),
                 'created_at'             => NOW()
             ]);
 
@@ -34,6 +36,7 @@ class OurServiceController extends Controller
                 'data' => [
                     'id'                      => $data->id,
                     'our_name_service'        => $data->our_service,
+                    'our_service_desc'        => $data->description,
                 ]
             ];
 
@@ -60,6 +63,7 @@ class OurServiceController extends Controller
             'data' => [
                 'id'                    => $data->id,
                 'our_name_service'      => $data->our_name_service,
+                'description'      => $data->description,
             ]
         ];
 
@@ -72,12 +76,14 @@ class OurServiceController extends Controller
 
         $request->validate([
             'our_service'     => 'required',
+            'our_service_desc'     => 'required',
         ]);
 
         try {
             DB::beginTransaction();
 
             $data->our_name_service     = $request->our_service;
+            $data->description     = $request->our_service_desc;
 
             $data->save();
 
@@ -89,6 +95,7 @@ class OurServiceController extends Controller
                 'data' => [
                     'id'                => $data->id,
                     'our_service'       => $data->our_name_service,
+                    'our_service_desc'       => $data->description,
                 ]
             ];
 

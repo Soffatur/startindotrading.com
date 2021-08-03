@@ -11,6 +11,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="base-url-api" content="{{url('/api')}}/">
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 
     @include('layouts.css')
 </head>

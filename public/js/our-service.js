@@ -1,7 +1,10 @@
+CKEDITOR.replace('our_service_desc');
+CKEDITOR.replace('our_service_desc2');
 $(document).on('click', '#testimoniinsertbtn', function(e) {
     e.preventDefault()
     var form = new FormData();
     form.append("our_service", $('#finserttestimoni input[name = "our_service"]').val());
+    form.append("our_service_desc", CKEDITOR.instances.our_service_desc.getData());
 
     var settings = {
         "url": urlapi + "api-our-service",
@@ -22,6 +25,11 @@ $(document).on('click', '#testimoniinsertbtn', function(e) {
             } else {
                 $('#vu_our_service').text('')
             }
+            if (err2.our_service_desc) {
+                $('#vu_desc').text(err2.our_service_desc)
+            } else {
+                $('#vu_desc').text('')
+            }
             $('#fprocessinserttestimoni').html("<button type='submit' class='btn btn-info btn-block' id='testimoniinsertbtn'><i class='fas fa-feather-alt'></i> Simpan</button>");
         },
         "beforeSend": function() {
@@ -35,6 +43,7 @@ $(document).on('click', '#testimoniinsertbtn', function(e) {
         var data1 = JSON.parse(response)
         $('#finserttestimoni').trigger('reset')
         $('#vu_our_service').text('')
+        $('#vu_desc').text('')
         $('#btnFormTestimoni').click();
         location.reload();
         Swal.fire(
@@ -65,6 +74,8 @@ $(document).on('click', '.edittestimoni', function() {
         var data2 = data1.data;
         $('#fupdatetestimoni input[name = "id_ourService"]').val(data2.id);
         $('#fupdatetestimoni input[name = "our_service"]').val(data2.our_name_service);
+        // $('#fupdatetestimoni input[name = "our_service_desc2"]').val(data2.description);
+        CKEDITOR.instances.our_service_desc2.setData(data2.description);
     });
 });
 
@@ -83,6 +94,7 @@ $(document).on('click', '#testimoniupdatebtn', function(e) {
             var form = new FormData();
             var id = $('#fupdatetestimoni input[name = "id_ourService"]').val();
             form.append("our_service", $('#fupdatetestimoni input[name = "our_service"]').val())
+            form.append("our_service_desc", CKEDITOR.instances.our_service_desc2.getData());
             form.append("_method", "PUT")
 
             var settings = {
@@ -105,6 +117,11 @@ $(document).on('click', '#testimoniupdatebtn', function(e) {
                     } else {
                         $('#vc_our_service').text('')
                     }
+                    if (err2.our_service_desc) {
+                        $('#vc_desc').text(err2.our_service_desc)
+                    } else {
+                        $('#vc_desc').text('')
+                    }
                     $('#fprocessupdatetestimoni').html("<button type='submit' class='btn btn-info btn-block' id='testimoniupdatebtn'><i class='fas fa-feather-alt'></i> Simpan</button>");
                 },
                 "beforeSend": function() {
@@ -119,6 +136,7 @@ $(document).on('click', '#testimoniupdatebtn', function(e) {
                 var data1 = JSON.parse(response)
                 $('#fupdatetestimoni').trigger('reset')
                 $('#vc_our_service').text('')
+                $('#vc_desc').text('')
                 $('#ubahtestimoni').click();
                 location.reload();
                 // var oTable = $('#sindexmanagementcustomershop').DataTable()

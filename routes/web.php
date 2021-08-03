@@ -12,7 +12,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::resource('/website-identity', 'WebsiteIdentityController');
     Route::resource('/telp-identity', 'indentityTelpController');
-    Route::resource('/link-referal', 'LinkReferalController');
+    // Route::resource('/link-referal', 'LinkReferalController');
     Route::resource('/link-master-ct', 'LinkMasterCTController');
     Route::resource('/link-ea', 'LinkEAController');
     Route::resource('/paket-ea', 'PaketEAController');
@@ -20,7 +20,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/gallery', 'GalleryController');
     Route::resource('/our-service', 'OurServiceController');
-    Route::resource('/our-service-detail', 'OurServiceDetailController');
 
     Route::get('/logout', 'Auth\AuthController@doLogout')->name('logout');
 });

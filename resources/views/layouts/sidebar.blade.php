@@ -20,9 +20,9 @@
                     <li>
                         <a href="{{ route('telp-identity.index') }}">Identitas Telepon</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('link-referal.index') }}">Link Referal</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{ route('link-master-ct.index') }}">Link Master CT</a>
                     </li>
@@ -31,9 +31,6 @@
                     </li>
                     <li>
                         <a href="{{ route('our-service.index') }}">Layanan Kami</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('our-service-detail.index') }}">Detail Layanan Kami</a>
                     </li>
                 </ul>
             </li>
