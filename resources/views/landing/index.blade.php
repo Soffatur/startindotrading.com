@@ -117,15 +117,7 @@
                 <div class="col-lg-6">
                     <div class="about-inifo">
                         {{-- <h2>Welcome to Tamai</h2> --}}
-                        <p>XtreamForex adalah Broker ECN dengan Pertumbuhan Tercepat yang dioperasikan oleh Xtream
-                            Markets Ltd.
-                            Kami terdaftar dan diatur oleh Pulau Marshall. XtreamForex menyediakan layanan perdagangan
-                            di Forex,
-                            komoditas, indeks, saham, dan cryptocurrency..</p>
-                        <p>Dengan kondisi perdagangan terbaik, kami menawarkan kepada Anda variasi akun yang tak
-                            tertandingi
-                            jenis, platform, dan perangkat yang dapat disesuaikan pelanggan dengan nyaman dan efisien
-                            pengalaman perdagangan.</p>
+                        {!! $about->description !!}
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -154,9 +146,7 @@
             <div class="row slider">
                 @foreach ($gallery as $row)
                     <div class="col-md-12">
-                        <img src="{{ asset('/storage') . '/' . $row->gallery_name }}" alt="" width="100%"
-                            class="img-thumbnail">
-                        {{-- <img src="{{ asset('/storage') . '/' . $item->photo }}" class="img-fluid" alt=""> --}}
+                        <img src="{{ asset('/storage') . '/' . $row->gallery_name }}" alt="" width="100%" class="img-thumbnail">
                     </div>
                 @endforeach
             </div>

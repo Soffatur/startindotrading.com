@@ -13,6 +13,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/website-identity', 'WebsiteIdentityController');
     Route::resource('/telp-identity', 'indentityTelpController');
     // Route::resource('/link-referal', 'LinkReferalController');
+    Route::resource('/about', 'AboutController');
     Route::resource('/link-master-ct', 'LinkMasterCTController');
     Route::resource('/link-ea', 'LinkEAController');
     Route::resource('/paket-ea', 'PaketEAController');

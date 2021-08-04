@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
 use App\Gallery;
 use App\IdentityTelp;
 use Illuminate\Http\Request;
@@ -24,12 +25,13 @@ class LandingController extends Controller
         $ourService = DB::select("SELECT * FROM our_service ORDER BY id");
         $gallery = Gallery::all();
         $linkCt = LinkMasterCT::all()->first();
+        $about = About::all()->first();
 
         Tracker::firstOrCreate([
             'ip'     => $request->ip(),
             'date'   => date('Y-m-d'),
         ])->save();
 
-        return view('landing.index', compact('identitywebsite', 'paketeas', 'testimonis', 'identityTelp', 'ourService', 'gallery', 'linkCt'));
+        return view('landing.index', compact('identitywebsite', 'paketeas', 'testimonis', 'identityTelp', 'ourService', 'gallery', 'linkCt', 'about'));
     }
 }
