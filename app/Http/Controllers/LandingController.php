@@ -26,6 +26,11 @@ class LandingController extends Controller
         $gallery = Gallery::all();
         $linkCt = LinkMasterCT::all()->first();
         $about = About::all()->first();
+        if($about == null){
+            if($about == null){
+                $about = (object) ['id' => 1, 'description' => ''];
+            }
+        }
 
         Tracker::firstOrCreate([
             'ip'     => $request->ip(),
