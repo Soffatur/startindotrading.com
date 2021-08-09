@@ -133,6 +133,91 @@
         </div>
     </section>
     <!--End About-us section -->
+    <!-- Start Our-work section -->
+    <section class="about-us section-padding" id="copy-trade">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tamai-header text-center">
+                        <h2>COPY TRADES WITH <span>XTREAMFOREX</span></h2>
+                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tenetur eveniet earum odio rem.</p> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7" style="padding-right: 70px">
+                    <div class="about-inifo">
+                        {{-- <h2>Welcome to Tamai</h2> --}}
+                        <p>FITUR yang dirancang untuk memudahkan Trader bekerjasama dengan Investor. Trader mendaftarkan diri sebagai Provider. Dan Investor mendaftarkan diri sebagai Subscriber.
+                            Saat Provider melakukan Open Trading di Akunnya, maka secara otomatis akan tercopy juga di Akun Subscriber.
+                            Subscriber akan mendapatkan kemudahan yaitu Tidak Perlu Harus Trading Sendiri dan Menganalisa Market Forex Sendiri. Yang Paling Penting adalah Subscriber Tidak Akan dikenakan Biaya-Biaya untuk Membeli / Menyewa Robot. Subscriber cukup Mendaftar, Membuat Akun Trading dan Melakukan Deposit / Penyetoran saja.
+                            Kemudian Subscriber tinggal Memonitor Akun Trading Sendiri di Aplikasi MT4 Android / PC / IOS, dan melakukan Withdraw / Penarikan kapanpun jika sudah mendapatkan Profit.
+                            Provider sudah mensetting sistem Profit Share, sehingga Subscriber akan mendapatkan Profit Bersih yang bisa langsung di Withdraw / Penarikan.
+                            Ayo Segera Bergabung Dengan Kami menggunakan Fitur Copy Trade ini!!!</p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="about-right">
+                        {{-- <img src="{{ asset('img/landing/trades.jpg') }}" class="img-fluid" alt="trades"> --}}
+                        {{-- <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2KzJ1p_eN-A?rel=0"
+                                allowfullscreen></iframe>
+                        </div> --}}
+                        <div class="video-area text-center tamai-video">
+                            <a class="video-play" href="https://www.youtube.com/watch?v=2KzJ1p_eN-A"><i
+                                    class="fa fa-play"></i></a>
+                            <h4>Watch video</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Start Pricing section -->
+    <section class="pricing section-padding" id="pricing">
+        <div class="container">
+            {{-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="tamai-header text-center">
+                        <h2>Pricing <span>plan</span></h2>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="row">
+                @foreach ($paketeas as $item)
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="pricing-table">
+                            <div class="pricing-head">
+                                <h3>{{ $item->name_deposit }}</h3>
+                            </div>
+                            <div class="price-tag">
+                                <h2> Deposit</h2>
+                            </div>
+                            <div class="pricing-body">
+                                <ul>
+                                    <li>
+                                        <p class="font-weight-bolder">Low Risk : ${{ $item->low_risk }}</p>
+                                    </li>
+                                    <li>
+                                        <p class="font-weight-bolder">Medium Risk : ${{ $item->medium_risk }}</p>
+                                    </li>
+                                    <li>
+                                        <p class="font-weight-bolder">High Risk : ${{ $item->high_risk }}</p>
+                                    </li>
+                                    <li style="font-size: 10px; font-weight: bold">Batas Kerugian :
+                                        {{ $item->loss_limit }}% dari deposit (max${{ $item->max_deposit }})</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-btn">
+                                <a href="{{$linkCt->link_master_ct}}" target="_blank" class="tamai-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!--End Pricing section -->
     <!-- Start Gallery -->
     <section class="service section-padding">
         <div class="container">
@@ -320,45 +405,6 @@
         </div>
     </section> --}}
     <!-- End counter section -->
-    <!-- Start Our-work section -->
-    <section class="about-us section-padding" id="copy-trade">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tamai-header text-center">
-                        <h2>COPY TRADES WITH <span>XTREAMFOREX</span></h2>
-                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tenetur eveniet earum odio rem.</p> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-7" style="padding-right: 70px">
-                    <div class="about-inifo">
-                        {{-- <h2>Welcome to Tamai</h2> --}}
-                        <p>Program Copy Trading XtreamForex menawarkan kesempatan untuk secara otomatis menyalin
-                            perdagangan dari trader sukses sehingga Anda tidak perlu menghabiskan banyak waktu untuk
-                            mengembangkan strategi Anda sendiri.
-                            Bergabunglah dengan program Copy Trading sekarang dan biarkan profesional terpilih bekerja
-                            untuk Anda!</p>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="about-right">
-                        {{-- <img src="{{ asset('img/landing/trades.jpg') }}" class="img-fluid" alt="trades"> --}}
-                        {{-- <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2KzJ1p_eN-A?rel=0"
-                                allowfullscreen></iframe>
-                        </div> --}}
-                        <div class="video-area text-center tamai-video">
-                            <a class="video-play" href="https://www.youtube.com/watch?v=2KzJ1p_eN-A"><i
-                                    class="fa fa-play"></i></a>
-                            <h4>Watch video</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     {{-- <section class="our-work section-padding" id="portfolio">
             <div class="container">
                 <div class="row">
@@ -485,51 +531,6 @@
         </div>
     </section> --}}
     <!--End Tamai-video section -->
-    <!-- Start Pricing section -->
-    <section class="pricing section-padding" id="pricing">
-        <div class="container">
-            {{-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="tamai-header text-center">
-                        <h2>Pricing <span>plan</span></h2>
-                    </div>
-                </div>
-            </div> --}}
-            <div class="row">
-                @foreach ($paketeas as $item)
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="pricing-table">
-                            <div class="pricing-head">
-                                <h3>{{ $item->name_deposit }}</h3>
-                            </div>
-                            <div class="price-tag">
-                                <h2> Deposit</h2>
-                            </div>
-                            <div class="pricing-body">
-                                <ul>
-                                    <li>
-                                        <p class="font-weight-bolder">Low Risk : ${{ $item->low_risk }}</p>
-                                    </li>
-                                    <li>
-                                        <p class="font-weight-bolder">Medium Risk : ${{ $item->medium_risk }}</p>
-                                    </li>
-                                    <li>
-                                        <p class="font-weight-bolder">High Risk : ${{ $item->high_risk }}</p>
-                                    </li>
-                                    <li style="font-size: 10px; font-weight: bold">Batas Kerugian :
-                                        {{ $item->loss_limit }}% dari deposit (max${{ $item->max_deposit }})</li>
-                                </ul>
-                            </div>
-                            <div class="pricing-btn">
-                                <a href="{{$linkCt->link_master_ct}}" target="_blank" class="tamai-btn">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!--End Pricing section -->
     <!-- Start Team section -->
     {{-- <section class="team section-padding" id="team">
             <div class="container">
@@ -809,40 +810,6 @@
             </div>
         </section> --}}
     <!-- End Blog section -->
-    <!-- Start Client section -->
-    <section class="client section-padding">
-        <div class="container">
-            {{-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="tamai-header text-center">
-                        <h2>our <span>client</span></h2>
-                    </div>
-                </div>
-            </div> --}}
-            <div class="row responsive owl-carousel">
-                <div class="text-center">
-                    <div class="client-img">
-                        <a href="#"><img src="{{ asset('img/ourclients/bca.svg') }}" alt="netteler"></a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="client-img">
-                        <a href="#"><img src="{{ asset('img/ourclients/mandiri.svg') }}" alt="skrill"></a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="client-img">
-                        <a href="#"><img src="{{ asset('img/ourclients/bni.png') }}" alt="visa hover"></a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="client-img">
-                        <a href="#"><img src="{{ asset('img/ourclients/bri.png') }}" alt="master card"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Client section -->
     <!-- Start contact section -->
     <section class="contact section-padding" id="contact">
         <div class="container">
@@ -925,6 +892,40 @@
             </div>
         </div>
     </section><!-- End contact section -->
+    <!-- Start Client section -->
+    <section class="client section-padding">
+        <div class="container">
+            {{-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="tamai-header text-center">
+                        <h2>our <span>client</span></h2>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="row responsive owl-carousel">
+                <div class="text-center">
+                    <div class="client-img">
+                        <a href="#"><img src="{{ asset('img/ourclients/bca.svg') }}" alt="netteler"></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="client-img">
+                        <a href="#"><img src="{{ asset('img/ourclients/mandiri.svg') }}" alt="skrill"></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="client-img">
+                        <a href="#"><img src="{{ asset('img/ourclients/bni.png') }}" alt="visa hover"></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="client-img">
+                        <a href="#"><img src="{{ asset('img/ourclients/bri.png') }}" alt="master card"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Client section -->
     <!-- Start Footer area -->
     <footer class="footer-area">
         <div class="container">

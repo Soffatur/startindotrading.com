@@ -26,9 +26,9 @@
                     <li>
                         <a href="{{ route('link-master-ct.index') }}">Link Master CT</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('link-ea.index') }}">Link EA</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{ route('our-service.index') }}">Layanan Kami</a>
                     </li>
