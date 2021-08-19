@@ -37,6 +37,15 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-6 col-md-6 m-b-30 has-validation">
+                                            <h6>Link Master CT 2</h6>
+                                            <input type="text" class="form-control @error('link_master_ct2') is-invalid @enderror" name="link_master_ct2" placeholder="Link Master CT" value="{{ $linkmastercts2->link_master_ct }}">
+                                            @error('link_master_ct2')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
                                     <div class="" id="">
                                         <button type="submit" class="btn btn-info mt-2" id=""><i class="fas fa-feather-alt"></i> Update</button>
                                     </div>

@@ -184,6 +184,7 @@
                 </div>
             </div> --}}
             <div class="row">
+                <?php $no = 0; ?>
                 @foreach ($paketeas as $item)
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="pricing-table">
@@ -209,10 +210,11 @@
                                 </ul>
                             </div>
                             <div class="pricing-btn">
-                                <a href="{{$linkCt->link_master_ct}}" target="_blank" class="tamai-btn">Order</a>
+                                <a href="{{$linkCt[$no]->link_master_ct}}" target="_blank" class="tamai-btn">Order</a>
                             </div>
                         </div>
                     </div>
+                    <?php $no++; ?>
                 @endforeach
             </div>
         </div>

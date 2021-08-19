@@ -24,7 +24,8 @@ class LandingController extends Controller
         $identityTelp = IdentityTelp::all();
         $ourService = DB::select("SELECT * FROM our_service ORDER BY id");
         $gallery = Gallery::all();
-        $linkCt = LinkMasterCT::all()->first();
+        $linkCt = LinkMasterCT::all();
+        // dd($linkCt);
         $about = About::all()->first();
         if($about == null){
             if($about == null){

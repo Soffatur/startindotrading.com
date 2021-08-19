@@ -15,8 +15,9 @@ class LinkMasterCTController extends Controller
     public function index()
     {
         $linkmastercts = LinkMasterCT::where('id', 1)->first();
+        $linkmastercts2 = LinkMasterCT::where('id', 2)->first();
 
-        return view('link-master-ct.index', compact('linkmastercts'));
+        return view('link-master-ct.index', compact('linkmastercts', 'linkmastercts2'));
     }
 
     /**
@@ -73,10 +74,14 @@ class LinkMasterCTController extends Controller
     {
         $request->validate([
             'link_master_ct'     => 'required',
+            'link_master_ct2'     => 'required',
         ]);
 
         LinkMasterCT::where('id', 1)->update([
             'link_master_ct' => $request->link_master_ct
+        ]);
+        LinkMasterCT::where('id', 2)->update([
+            'link_master_ct' => $request->link_master_ct2
         ]);
 
         return redirect()->back()->with('success', 'the ct master link has been successfully modified');
